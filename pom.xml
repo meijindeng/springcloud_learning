@@ -13,6 +13,7 @@
         <module>sc_api_commons</module>
         <module>sc_provide_payment</module>
         <module>sc_consumer_order</module>
+        <module>sc_eureka_server</module>
     </modules>
 
     <!--打包方式-->
