@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="sc_consumer_order" />
         <module name="sc_provide_payment" />
+        <module name="sc_eureka_server1" />
         <module name="sc_api_commons" />
         <module name="sc_eureka_server" />
       </profile>
