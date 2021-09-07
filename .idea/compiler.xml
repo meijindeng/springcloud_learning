@@ -13,6 +13,7 @@
         <module name="sc_provide_payment" />
         <module name="sc_eureka_server1" />
         <module name="sc_provide_payment1" />
+        <module name="sc_consumer_order_feign" />
       </profile>
     </annotationProcessing>
   </component>

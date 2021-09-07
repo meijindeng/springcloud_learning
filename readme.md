@@ -19,6 +19,16 @@
   - 启动两个注册中心，两个提供者，一个消费者端口；
   - 结果：由原先的轮询8001服务与8002服务来回切换，变为了8001服务与8002服务随机访问。
 
+## sc_consumer_order_feign(80)
+- sc_consumer_order_feign为：服务消费者
+- 集成Openfeign实现负载均衡
+
+  - 修改pom文件，添加openfeign依赖；
+  - 新建application配置文件，端口为80；
+  - 在启动类上添加@EnableFeignClients注解；
+  - 编写业务类以及控制层代码；
+  - 运行服务，结果：8001服务与8002服务随机访问，实现负载均衡功能。
+
 ## sc_eureka_server(7001)
 - sc_eureka_server为：服务注册中心1
 - 将sc_provide_payment注入注册中心 
