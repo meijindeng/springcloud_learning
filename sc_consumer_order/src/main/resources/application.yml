@@ -2,7 +2,7 @@ server:
   port: 80
 spring:
   application:
-    name: sc_consumer_order  #服务名
+    name: sc-consumer-order  #服务名
 
 #eureka配置
 eureka:

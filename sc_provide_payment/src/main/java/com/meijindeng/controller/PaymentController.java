@@ -5,7 +5,11 @@ import com.meijindeng.pojo.Payment;
 import com.meijindeng.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @description: PaymentController
@@ -17,6 +21,9 @@ import org.springframework.web.bind.annotation.*;
 public class PaymentController {
     @Autowired
     private PaymentService paymentService;
+
+    @Autowired
+    private DiscoveryClient discoveryClient;//服务发现注解
 
     @PostMapping("/payment/create")
     public CommonResult create(@RequestBody Payment payment){
@@ -38,5 +45,22 @@ public class PaymentController {
         }else{
             return new CommonResult(444,"查询失败",null);
         }
+    }
+
+    /**
+     * Eureka服务发现
+     * @return
+     */
+    @GetMapping("/payment/discovery")
+    public Object discovery(){
+        List<String> services = discoveryClient.getServices();
+        for (String s : services) {
+            log.info("**************注册到Eureka的服务有：**************"+services);
+        }
+        List<ServiceInstance> instances = discoveryClient.getInstances("SC-PROVIDE-PAYMENT");
+        for (ServiceInstance s: instances) {
+            log.info("当前服务的实例有："+s.getServiceId()+"\t"+s.getHost()+"\t"+s.getPort()+"\t"+s.getUri());
+        }
+        return this.discoveryClient;
     }
 }

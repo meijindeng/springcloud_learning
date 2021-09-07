@@ -4,6 +4,11 @@
 
 ## sc_provide_payment(8001)
 - sc_provide_payment为：服务提供者
+- 服务注册发现：对于注册到Eureka中的微服务，可以通过服务发现来获得该服务的信息。
+
+  - 在Controller中添加服务发现注解以及接口：
+  - 启动两个注册中心，两个提供者，一个消费者端口；
+  - 结果：{"discoveryClients":[{"services":["sc-provide-payment","sc-consumer-order"],"order":0},{"services":[],"order":0}],"services":["sc-provide-payment","sc-consumer-order"],"order":0}
 
 ## sc_consumer_order(80)
 - sc_consumer_order为：服务消费者
