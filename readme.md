@@ -12,10 +12,15 @@
 
 ## sc_consumer_order(80)
 - sc_consumer_order为：服务消费者
+- 集成Ribbon的负载算法;
+
+  - 自定义配置类MyselfRule；
+  - 启动类添加@RibbonClient注解，name为生产者服务的服务名称  configuration为配置类的类名；
+  - 启动两个注册中心，两个提供者，一个消费者端口；
+  - 结果：由原先的轮询8001服务与8002服务来回切换，变为了8001服务与8002服务随机访问。
 
 ## sc_eureka_server(7001)
 - sc_eureka_server为：服务注册中心1
-
 - 将sc_provide_payment注入注册中心 
 
   - 在pom文件中增加spring-cloud-starter-netflix-eureka-client依赖；
