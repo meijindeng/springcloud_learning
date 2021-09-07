@@ -15,6 +15,7 @@
         <module>sc_consumer_order</module>
         <module>sc_eureka_server</module>
         <module>sc_eureka_server1</module>
+        <module>sc_provide_payment1</module>
     </modules>
 
     <!--打包方式-->
