@@ -14,6 +14,7 @@
         <module name="sc_consumer_order_hystrix" />
         <module name="sc_eureka_server" />
         <module name="sc_provide_payment" />
+        <module name="sc_api_gateway" />
         <module name="sc_eureka_server1" />
         <module name="sc_consumer_order_feign" />
       </profile>

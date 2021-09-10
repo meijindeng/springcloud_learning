@@ -69,3 +69,15 @@
 - 编写业务类和控制层代码；
 - 目前使用单机版的Eureka，端口为7001，记得要修改Eureka的yml文件，要指向自己；
 - 以上只是生产者服务自己8001的测试，假如此时外部的消费者服务80也来访问，那消费者只能干等，最终导致消费端服务80不满意，服务端8001直接被拖死。
+
+## sc_api_gateway(9527)
+- sc_api_gateway为：API网关
+- 创建module，配置pom（不要引入web依赖）、application文件以及启动类；
+- 使用服务提供者为例进行网关映射；
+
+  - 需要在gateway的yml配置新增路由配置（cloud:gateway:routes:...）；
+  - 此时就可以通过地址http://localhost:9527/payment/get/1进行访问；
+- 以上是通过yml方式进行访问，还有种方式是通过硬编码方式，向代码中注入RouteLocator的Bean，是为了解决YML文件配置太多，文件太大的问题。
+
+  - 新建一个config配置文件GateWayConfig；
+  - 通过地址http://localhost:9527/guonei进行访问
