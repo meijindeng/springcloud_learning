@@ -62,3 +62,10 @@
 - 在服务消费者controller层，将请求路径改服务提供者名称，并且在config配置中加上@LoadBalanced注解，实现RestTemplate的负载均衡能力；
   
   - 这里需要注意的是：负载均衡Ribbon是不支持服务提供者的名称为下划线的，只支持横线。
+  
+## sc_provide_payment_hystrix(8001)
+- sc_provide_payment_hystrix为：服务提供者（Hystrix熔断降级）
+- 创建module，配置pom、application文件以及启动类，启动类加上注解@EnableEurekaClient；
+- 编写业务类和控制层代码；
+- 目前使用单机版的Eureka，端口为7001，记得要修改Eureka的yml文件，要指向自己；
+- 以上只是生产者服务自己8001的测试，假如此时外部的消费者服务80也来访问，那消费者只能干等，最终导致消费端服务80不满意，服务端8001直接被拖死。

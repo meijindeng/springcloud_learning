@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/sc_consumer_order/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sc_consumer_order_feign/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sc_consumer_order_feign/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sc_consumer_order_hystrix/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sc_consumer_order_hystrix/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sc_eureka_server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sc_eureka_server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sc_eureka_server1/src/main/java" charset="UTF-8" />
@@ -15,5 +17,7 @@
     <file url="file://$PROJECT_DIR$/sc_provide_payment/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sc_provide_payment1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sc_provide_payment1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sc_provide_payment_hystrix/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sc_provide_payment_hystrix/src/main/resources" charset="UTF-8" />
   </component>
 </project>
